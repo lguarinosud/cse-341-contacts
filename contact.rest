@@ -1,0 +1,12 @@
+
+## get all contacts
+GET https://cse-341-contacts-j1qs.onrender.com/contacts/  HTTP/1.1
+content-type: application/json
+
+
+## get contacts by id: e.g.: 
+GET https://cse-341-contacts-j1qs.onrender.com/contacts/6726a669a20cc94e69a81d25 HTTP/1.1
+content-type: application/json
+
+
+
