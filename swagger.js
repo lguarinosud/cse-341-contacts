@@ -1,7 +1,6 @@
-// swagger.js or swaggerConfig.js
 const swaggerAutogen = require('swagger-autogen')();
 const dotenv = require('dotenv');
-dotenv.config(); // Load environment variables
+dotenv.config();
 
 const HOST = process.env.HOST || 'localhost:3000';
 const schemes = HOST === 'localhost:3000' ? ['http'] : ['https'];
@@ -11,9 +10,9 @@ const doc = {
         title: 'Contact API',
         description: 'To interact with my contacts DB',
     },
-    host: HOST, // Dynamically set based on environment
-    schemes: schemes, // Dynamically set to http/https
-    basePath: '/', // Specify the base path
+    host: HOST, // Taken from .env in local and from environment variables in render.com
+    schemes: schemes, // local http, render https
+    basePath: '/',
     paths: {
         '/': {
             get: {
@@ -28,10 +27,9 @@ const doc = {
     },
 };
 
-const outputFile = './swagger-output.json'; // Output file path
-const endpointsFiles = ['./server.js']; // Your main server file
+const outputFile = './swagger-output.json';
+const endpointsFiles = ['./server.js'];
 
-swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
-    // Start server after Swagger generation if needed
-    require('./server.js'); // Adjust if your entry point is named differently
-});
+console.log('API running on HOST:', `${schemes}://${doc.host} `);
+
+swaggerAutogen(outputFile, endpointsFiles, doc);

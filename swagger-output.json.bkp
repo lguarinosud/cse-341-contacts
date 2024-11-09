@@ -2,20 +2,15 @@
   "swagger": "2.0",
   "info": {
     "title": "Contact API",
-    "description": "To interact with my contacts DB",
+    "description": "to Interact with my contacts DB",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
   "basePath": "/",
-  "schemes": [
-    "http"
-  ],
+  "schemes": ["http", "https"],
   "paths": {
     "/": {
       "get": {
-        "tags": [
-          "Hello World"
-        ],
         "description": "",
         "responses": {
           "200": {
@@ -26,13 +21,9 @@
     },
     "/contacts/": {
       "get": {
-        "tags": [
-          "contacts"
-        ],
+        "tags": ["contacts"],
         "description": "",
-        "produces": [
-          "Application/json"
-        ],
+        "produces": ["Application/json"],
         "responses": {
           "200": {
             "description": "OK"
@@ -40,9 +31,7 @@
         }
       },
       "post": {
-        "tags": [
-          "contacts"
-        ],
+        "tags": ["contacts"],
         "description": "",
         "parameters": [
           {
@@ -82,13 +71,9 @@
     },
     "/contacts/{id}": {
       "get": {
-        "tags": [
-          "contacts"
-        ],
+        "tags": ["contacts"],
         "description": "",
-        "produces": [
-          "Application/json"
-        ],
+        "produces": ["Application/json"],
         "parameters": [
           {
             "name": "id",
@@ -104,9 +89,7 @@
         }
       },
       "put": {
-        "tags": [
-          "contacts"
-        ],
+        "tags": ["contacts"],
         "description": "",
         "parameters": [
           {
@@ -150,9 +133,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "contacts"
-        ],
+        "tags": ["contacts"],
         "description": "",
         "parameters": [
           {
