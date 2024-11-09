@@ -7,10 +7,7 @@
   },
   "host": "localhost:3000",
   "basePath": "/",
-  "schemes": [
-    "http",
-    "https"
-  ],
+  "schemes": ["http", "https"],
   "paths": {
     "/": {
       "get": {
@@ -24,13 +21,9 @@
     },
     "/contacts/": {
       "get": {
-        "tags": [
-          "contacts"
-        ],
+        "tags": ["contacts"],
         "description": "",
-        "produces": [
-          "Application/json"
-        ],
+        "produces": ["Application/json"],
         "responses": {
           "200": {
             "description": "OK"
@@ -38,9 +31,7 @@
         }
       },
       "post": {
-        "tags": [
-          "contacts"
-        ],
+        "tags": ["contacts"],
         "description": "",
         "parameters": [
           {
@@ -80,13 +71,9 @@
     },
     "/contacts/{id}": {
       "get": {
-        "tags": [
-          "contacts"
-        ],
+        "tags": ["contacts"],
         "description": "",
-        "produces": [
-          "Application/json"
-        ],
+        "produces": ["Application/json"],
         "parameters": [
           {
             "name": "id",
@@ -102,9 +89,7 @@
         }
       },
       "put": {
-        "tags": [
-          "contacts"
-        ],
+        "tags": ["contacts"],
         "description": "",
         "parameters": [
           {
@@ -148,9 +133,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "contacts"
-        ],
+        "tags": ["contacts"],
         "description": "",
         "parameters": [
           {
